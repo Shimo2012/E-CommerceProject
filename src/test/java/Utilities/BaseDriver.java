@@ -44,7 +44,7 @@ public class BaseDriver {
 
     @BeforeMethod
     public void beforeMethod() {
-        driver.get("https://demo.nopcommerce.com/");
+        driver.get("https://cleverppc.com/prestashop4/");
         logger4j.info("Test method started");
         logger4j.warn("Warning message test started");
     }
