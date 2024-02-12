@@ -16,7 +16,7 @@ public class LocatorPage extends Parent {
     }
 
     @FindBy(css = "a[class=\"login\"]")
-    public WebElement login;
+    public WebElement signin;
 
     @FindBy(css = "input[id=\"email_create\"]")
     public WebElement emailAddress;
