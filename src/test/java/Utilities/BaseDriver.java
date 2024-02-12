@@ -14,6 +14,8 @@ import java.time.Duration;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import static Pages.Parent.waiting;
+
 
 public class BaseDriver {
 
@@ -37,8 +39,8 @@ public class BaseDriver {
     }
 
     @AfterClass
-    public void tearDownProcess() throws InterruptedException {
-        wait(5);
+    public void tearDownProcess() {
+        waiting(5);
         driver.quit();
     }
 
