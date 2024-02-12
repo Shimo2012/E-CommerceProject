@@ -32,7 +32,6 @@ public class AllSteps extends BaseDriver {
    public void enterDataInTextBox() {
 
 
-
    }
 
       @And("Verification Is In Progress")
