@@ -1,57 +1,105 @@
 package Pages;
 
 
+import Utilities.MyMethods;
 import Utilities.BaseDriver;
-import org.apache.xmlbeans.impl.xb.xsdschema.Public;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class LocatorPage extends Parent {
+public class LocatorPage extends MyMethods {
 
     public LocatorPage() {
         PageFactory.initElements(BaseDriver.driver, this);
     }
 
     @FindBy(css = "a[class=\"login\"]")
-    public WebElement signin;
+    private WebElement signin;
 
     @FindBy(css = "input[id=\"email_create\"]")
-    public WebElement emailAddress;
+    private WebElement emailAddress;
 
     @FindBy(css = "button[name=\"SubmitCreate\"]")
-    public WebElement createAnAccount;
+    private WebElement createAnAccount;
 
     @FindBy(css = "input[id=\"id_gender1\"]")
-    public WebElement maleGender;
+    private WebElement maleGender;
 
     @FindBy(css = "input[id=\"customer_firstname\"]")
-    public WebElement firstName;
+    private WebElement firstName;
 
     @FindBy(css = "input[id=\"customer_lastname\"]")
-    public WebElement lastName;
+    private WebElement lastName;
 
     @FindBy(css = "input[id=\"email\"]")
-    public WebElement email;
+    private WebElement email;
 
     @FindBy(css = "input[id=\"passwd\"]")
-    public WebElement passWord;
+    private WebElement passWord;
 
     @FindBy(css = "select[id=\"days\"]")
-    public WebElement days;
+    private WebElement days;
 
     @FindBy(css = "select[id=\"months\"]")
-    public WebElement months;
+    private WebElement months;
 
     @FindBy(css = "select[id=\"years\"]")
-    public WebElement years;
+    private WebElement years;
 
    @FindBy(xpath = "//span[text()=\"Register\"]")
-   public WebElement register;
+   private WebElement register;
 
 
+    public WebElement getSignin() {
+        return signin;
+    }
+
+    public WebElement getEmailAddress() {
+        return emailAddress;
+    }
+
+    public WebElement getCreateAnAccount() {
+        return createAnAccount;
+    }
+
+    public WebElement getMaleGender() {
+        return maleGender;
+    }
+
+    public WebElement getFirstName() {
+        return firstName;
+    }
+
+    public WebElement getLastName() {
+        return lastName;
+    }
+
+    public WebElement getEmail() {
+        return email;
+    }
+
+    public WebElement getPassWord() {
+        return passWord;
+    }
+
+    public WebElement getDays() {
+        return days;
+    }
+
+    public WebElement getMonths() {
+        return months;
+    }
+
+    public WebElement getYears() {
+        return years;
+    }
+
+    public WebElement getRegister() {
+        return register;
+    }
 
     public List<WebElement> getSubtabs() {
         List<WebElement> subtabs = null;
